@@ -1,14 +1,45 @@
-/* Outdated CSS */
+/* Updated CSS */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
-
-h1 {
-    margin: 0;
+.container{
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+  "header header "
+  "slogan slogan"
+  "nav content"
+  "footer footer"
 }
-
+h1{
+    grid-area:header;
+    margin:0rem;
+    padding:2rem;
+    background-color:#4682B4;
+    text-align:center;
+}
+.slogan{grid-area:slogan;
+    padding: 2rem;
+    background-color:#708090;
+    text-align:center;
+}
+nav {
+  grid-area:nav;
+  padding: 2rem;
+  background-color:#4B74C5;
+}
+main{
+  grid-area:content;
+  padding: 2rem;
+    background-color:#4682B4;
+}
+footer{
+  grid-area:footer;
+  padding: 2rem;
+  background-color:#708090;
+  text-align:center;
+}
 ul {
     margin: 0;
     padding: 0;
@@ -27,9 +58,4 @@ p {
 img {
     width: 100%;
     height: auto;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
 }
